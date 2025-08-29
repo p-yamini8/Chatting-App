@@ -19,6 +19,7 @@ signupform.addEventListener('submit',async(e)=>{
     if(response.ok)
     {signupform.reset();
        alert('login success')
+       window.location.href='/login/login.html';
     }
      else {
                 alert('Signup failed: ' + result.message);

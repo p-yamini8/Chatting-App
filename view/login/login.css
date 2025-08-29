@@ -1,0 +1,73 @@
+/* Apply a clean background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the login box */
+#login_div {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    width: 350px;
+    text-align: center;
+}
+
+/* Form heading */
+#login_form h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+#login_form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+#login_form input:focus {
+    border-color: #2575fc;
+}
+
+/* Login button */
+#login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #2575fc;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#login-btn:hover {
+    background: #1a5cd8;
+}
+
+/* Signup link */
+#signup-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #2575fc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+#signup-link:hover {
+    color: #6a11cb;
+}
