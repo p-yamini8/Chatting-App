@@ -15,6 +15,7 @@ loginform.addEventListener('submit',async(e)=>{
         {
             loginform.reset();
             alert('login success');
+            window.location.href='/chat/chat.html';
         }
     else{
     alert(result.message||'login failed');
