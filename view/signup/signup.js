@@ -18,7 +18,7 @@ signupform.addEventListener('submit',async(e)=>{
     const result=await response.json();
     if(response.ok)
     {signupform.reset();
-       alert('login success')
+       alert('signup success')
        window.location.href='/login/login.html';
     }
      else {

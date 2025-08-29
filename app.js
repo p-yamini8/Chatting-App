@@ -24,10 +24,11 @@ app.use(express.static(path.join(__dirname,'view')))
 app.get('/',(req,res)=>{
 res.sendFile(path.join(__dirname,'view','signup' ,'signup.html'));
 })
-const userRoutes=require('./routes/user.js');
-
+const userRoutes=require('./routes/user');
+const messageRoutes=require('./routes/message')
 //
 app.use('/user',userRoutes);
+app.use('/message',messageRoutes);
 sequelize.sync()
 .then(()=>{
 app.listen(3000,()=>{

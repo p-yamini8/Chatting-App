@@ -12,7 +12,7 @@ loginform.addEventListener('submit',async(e)=>{
         });
         const result=await res.json();
         if(res.ok)
-        {
+        {localStorage.setItem('token',result.token);
             loginform.reset();
             alert('login success');
             window.location.href='/chat/chat.html';

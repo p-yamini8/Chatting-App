@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Window</title>
-    <link rel="stylesheet" href="/chat/chat.css" >
-  </head>
-  <body>
-    <h1 style='text-align:center;'>Chat App</h1>
-    <div id="chatScreen">
-    <div class="chat-container">
-      <div class="users">
-        <h3>Users</h3>
-        <ul id="userList"></ul>
-      </div>
-      <div class="chat">
-        <div class="messages" id="messages"></div>
-        <div class="input-box">
-          <input id="msg" placeholder="Type a message..." />
-          <button onclick="sendMessage()">Send</button>
+    <link rel="stylesheet" href="/chat/chat.css">
+</head>
+
+<body>
+   
+    <div id="container"> <!-- User List Panel -->
+        <div id="userListContainer">
+            <h3>Users</h3>
+            <ul id="userList"></ul>
+        </div> <!-- Chat Window -->
+        <div id="chatContainer">
+            <div id="chatHeader">Select a user to start chatting</div>
+            <div id="chatMessages"></div>
+            <form id="chatForm">
+                <input type="text" id="messageInput" name="messageInput" placeholder="Type your message..." required />
+                <button type="submit">Send</button>
+            </form>
         </div>
-      </div>
     </div>
-  </div>
- 
- 
-  </body>
+
+    <script src="/chat/chat.js"></script>
+
+</body>
+
 </html>

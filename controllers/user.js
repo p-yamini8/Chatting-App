@@ -1,7 +1,7 @@
 const User=require('../model/user');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
-
+const {Op}=require('sequelize');
 require('dotenv').config();
 exports.signup=async(req,res)=>{
     try{
@@ -57,4 +57,19 @@ return res.status(401).json({message:'Invalid credentials'});
     console.log(err);
     return res.status(500).json({message:'error login',err})
 }
+}
+
+exports.getAllUsers=async (req,res)=>{
+  try {
+   const users=await User.findAll({
+    attributes:['id','name','email'],
+    where:{
+       id:{[Op.ne]:req.user.id}
+    }
+   });
+   res.status(200).json({users});
+  } catch (error) {
+    console.error('Error fetching users:', error);
+    res.status(500).json({ message: 'Error fetching users' });
+  }
 }
